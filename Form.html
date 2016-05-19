@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<title>Sample Form</title>
+    
+<style>
+    
+    body {
+        background-color:aqua;
+    }
+    
+    h1 {
+        color: coral;
+        text-align: center;
+        text-decoration-style: wavy;
+    }
+    
+    h1:hover {
+        color: blue;
+    }
+    form {
+       
+        margin: 0 auto;
+        width: 250px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    
+    input {
+        border-radius: 5px 5px 5px 5px;
+    }
+    
+    span {
+        text-decoration: underline;
+        color: blue;
+    }
+
+</style>
+</head>
+<body>
+    
+    <h1>Sample Form</h1>
+    <form action="form_handler.php" id="sample" method="post">
+        
+        First Name:<br>
+        <input type="text" name="firstname"><br><br>
+        
+        Last Name:<br>
+        <input type="text" name="lastname"><br><br>
+        
+        Username:<br>
+        <input type="text" name="username"><br><br>
+        
+        Email:<br>
+        <input type="email" name="email"><br><br>
+        
+        Password:<br>
+        <input type="password" name="psw"><br><br>
+        
+        Gender:<br>
+        <input type="radio" name="gender" value="Male">Male 
+        <input type="radio" name="gender" value="Female">Fenale 
+        <input type="radio" name="gender" value="Others">Others<br><br>
+        
+        Age:<br>
+        <input type="number" name="age" min="0" max="100"><br><br>
+        
+        Date Of Birth:<br>
+        <input type="date" name="dob" pattern="dd-mm=yyyy" min="01-01-1980" max="30-12-2005"><br><br>
+        
+        Favourite Color:<br>
+        <input type="color" name="favcolor" ><br><br>
+        
+        Branch:<br>
+        <select name="branch">
+            <option value="cse">Computer Science & Engineering</option>
+            <option value="me">Mechanical Engineering</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="ece">Electronics & Communication Engineering</option>
+            <option value="mnc">Mathematics and Computing</option>
+        </select><br><br>
+        
+        Telephone:<br>
+        <input type="tel" name="usrtel"><br><br>
+        
+        <input type="checkbox" name="checkbox"> I agree to <span>terms & conditions</span><br><br>
+        
+        <input type="submit" name="submit" value="Submit" onclick="onSubmit()">
+        <input type="reset" name="reset" value="Reset">
+        
+    </form>
+    
+    <script>
+    function onSubmit()
+        {
+            document.getElementById("sample").innerHTML="Form Submitted Successfully....";
+            document.getElementById("sample").style.marginTop= "100px";
+            document.getElementById("sample").style.verticalAlign= "center";
+        }
+    </script>
+</body>
+</html>
